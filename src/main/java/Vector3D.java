@@ -45,6 +45,10 @@ public class Vector3D {
     public Vector3D normalize() {
         double len = length();
 
+        if (len == 0) {
+            return new Vector3D(0, 0, 0);
+        }
+
         return new Vector3D(x / len, y / len, z / len);
     }
 }
