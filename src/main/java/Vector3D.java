@@ -51,4 +51,12 @@ public class Vector3D {
 
         return new Vector3D(x / len, y / len, z / len);
     }
+
+    public Vector3D cross(Vector3D other) {
+        return new Vector3D(
+                y * other.getZ() - z * other.getY(),
+                z * other.getX() - x * other.getZ(),
+                x * other.getY() - y * other.getX()
+        );
+    }
 }
